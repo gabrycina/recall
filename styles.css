@@ -1,0 +1,25 @@
+#yt-quiz-container {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: white;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.5);
+  z-index: 9999;
+}
+
+#options button {
+  display: block;
+  margin: 10px 0;
+  padding: 5px 10px;
+}
+
+#options button.selected {
+  background-color: #e0e0e0;
+}
+
+#submit-answer {
+  margin-top: 20px;
+}

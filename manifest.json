@@ -1,0 +1,35 @@
+{
+  "manifest_version": 3,
+  "name": "YouTube Quiz Extension",
+  "version": "1.0",
+  "description": "Creates and proposes quizzes during YouTube videos",
+  "permissions": [
+    "identity",
+    "storage",
+    "activeTab",
+    "scripting"
+  ],
+  "host_permissions": [
+    "https://www.youtube.com/*",
+    "https://www.googleapis.com/*",
+    "https://api.openai.com/*"
+  ],
+  "background": {
+    "service_worker": "background.js"
+  },
+  "content_scripts": [
+    {
+      "matches": ["https://www.youtube.com/*"],
+      "js": ["content.js"],
+      "css": ["styles.css"]
+    }
+  ],
+  "oauth2": {
+    "client_id": "742535248856-ra34crdncub320207fkn5kcehjjnsjh9.apps.googleusercontent.com",
+    "scopes": [
+      "https://www.googleapis.com/auth/youtube.force-ssl",
+      "https://www.googleapis.com/auth/youtube.readonly"
+    ]
+  },
+  "options_page": "options.html"
+}
