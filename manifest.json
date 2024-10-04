@@ -15,12 +15,12 @@
     "https://api.openai.com/*"
   ],
   "background": {
-    "service_worker": "background.js"
+    "service_worker": "dist/background.js"
   },
   "content_scripts": [
     {
       "matches": ["https://www.youtube.com/*"],
-      "js": ["content.js"],
+      "js": ["dist/content.js"],
       "css": ["styles.css"]
     }
   ],
@@ -31,5 +31,5 @@
       "https://www.googleapis.com/auth/youtube.readonly"
     ]
   },
-  "options_page": "options.html"
+  "options_page": "dist/options.html"
 }
