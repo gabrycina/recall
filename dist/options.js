@@ -1,13 +1,1 @@
-"use strict";
-document.getElementById('save').addEventListener('click', () => {
-    const openAIKey = document.getElementById('openAIKey').value;
-    chrome.storage.sync.set({ openAIKey: openAIKey }, () => {
-        alert('Settings saved successfully!');
-    });
-});
-// Load saved API key when options page is opened
-chrome.storage.sync.get(['openAIKey'], (data) => {
-    if (data.openAIKey) {
-        document.getElementById('openAIKey').value = data.openAIKey;
-    }
-});
+(()=>{"use strict";document.getElementById("save").addEventListener("click",(()=>{const e=document.getElementById("openAIKey").value;chrome.storage.sync.set({openAIKey:e},(()=>{alert("Settings saved successfully!")}))})),chrome.storage.sync.get(["openAIKey"],(e=>{e.openAIKey&&(document.getElementById("openAIKey").value=e.openAIKey)}))})();
