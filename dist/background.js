@@ -1,1 +1,0 @@
-(()=>{"use strict";chrome.identity.getAuthToken({interactive:!0},(function(e){chrome.runtime.lastError?console.error(chrome.runtime.lastError):chrome.storage.sync.set({youtubeAuthToken:e})}))})();
